@@ -52,27 +52,43 @@ def create_address(db: Session, address: Address):
 
     return db_address
 
+def update_address(db: Session, address: Address):
+    db_address = DBAddress(**address.dict())
+    db.update(db_address)
+    db.commit()
+    db.refresh(db_address)
+
+    return db_address
+
 def get_addresses(db: Session):
     return db.query(DBAddress).all()
 
 def get_address_btwn(db: Session, lng_from: float, lng_to: float):
     return db.query(DBAddress).filter(DBAddress.lng >= lng_from).filter(DBAddress.lng <=lng_to).all()
 
-
 # Routes for interacting with the API
-@app.post('/address/', response_model=Address)
+@app.post('/create_address/', response_model=Address)
 def create_address_view(address: Address, db: Session = Depends(get_db)):
     db_address = create_address(db, address)
     return db_address
 
-@app.get('/address/', response_model=List[Address])
+@app.post('/update_address/', response_model=Address)
+def update_address(address: Address, db: Session = Depends(get_db)):
+    db_address = update_address(db, address)
+    return db_address
+
+@app.get('/get_address/', response_model=List[Address])
 def get_addresses_view(db: Session = Depends(get_db)):
     return get_addresses(db)
 
-
-@app.get('/between_address/')
+@app.get('/get_between_address/')
 def get_address_between_view(lng_from: float, lng_to: float, db: Session = Depends(get_db)):
      return get_address_btwn(db, lng_from, lng_to)
+
+@app.delete('/delete_address/', response_model=Address)
+def delete_address(id: int, db: Session = Depends(get_db)):
+    db.query(DBAddress).filter(DBAddress.id == id).delete()
+    db.commit()
 
 @app.get('/')
 async def root():
