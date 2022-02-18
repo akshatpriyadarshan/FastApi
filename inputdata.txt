@@ -1,0 +1,66 @@
+  {
+    "name": "Nanjangud",
+    "address": "Mysore Karnataka India",
+    "lng": 12.12,
+    "lat": 76.68
+  }
+  {
+    "name": "Chittorgarh",
+    "address": "Rajasthan India",
+    "lng": 24.87,
+    "lat": 74.62
+  }
+  {
+    "name": "Chittorgarh",
+    "address": "Rajasthan India",
+    "lng": 24.87,
+    "lat": 74.62
+  }
+  {
+    "name": "Ratnagiri",
+    "address": "Maharashtra, India",
+    "lng": 16.99,
+    "lat": 73.30
+  }
+  {
+    "name": "Goregaon",
+    "address": "Mumbai, Maharashtra, India",
+    "lng": 19.15,
+    "lat": 72.84
+  }
+  {
+    "name": "Pindwara",
+    "address": "Rajasthan, India",
+    "lng": 24.79,
+    "lat": 73.05
+  }
+  {
+    "name": "Raipur",
+    "address": "Chhattisgarh, India",
+    "lng": 21.25,
+    "lat": 81.62
+  }
+  {
+    "name": "Gokak",
+    "address": "Karnataka, India",
+    "lng": 16.16,
+    "lat": 74.83
+  }
+  {
+    "name": "Sagar",
+    "address": "Karnataka, India",
+    "lng": 14.16,
+    "lat": 75.04
+  }
+  {
+    "name": "Thiruvalla",
+    "address": "Kerala, India",
+    "lng": 9.38,
+    "lat": 76.57
+  }
+  {
+    "name": "Jagadhri",
+    "address": "Haryana, India",
+    "lng": 30.17,
+    "lat": 77.29
+  }
